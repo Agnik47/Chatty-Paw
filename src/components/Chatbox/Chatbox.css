@@ -1,0 +1,130 @@
+.cb {
+  height: 75vh;
+  position: relative;
+  background-color: #fff;
+}
+
+.c-user {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.c-user img {
+  width: 25px;
+  border-radius: 50%;
+}
+
+.c-user img:first-child {
+  width: 38px;
+  aspect-ratio: 1/1;
+}
+
+.c-user p {
+  flex: 1;
+  font-weight: 500;
+  font-size: 1vw;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* background-color: red; */
+}
+.c-user p .g-dot {
+  position: absolute;
+  width: 1.2vw;
+  left: 2.7vw;
+  top: 2vw;
+}
+
+.c-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  background-color: #f0f8ff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.c-input img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.c-input label {
+  display: flex;
+}
+
+.c-input label img {
+  width: 22px;
+}
+
+.c-input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.c-message {
+  height: calc(100% - 70px);
+  padding-bottom: 3vw;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+.send-msg div img, .our-msg div img {
+    width: 1.7vw;
+    height: 1.7vw;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+
+}
+
+
+.send-msg, .our-msg {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    gap: 1vw;
+    padding: 0 1vw;
+}
+
+.our-msg {
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+
+.msg {
+    color: white;
+    background-color: #077EFF;
+    padding: 8px;
+    max-width: 200px;
+    font-size: 0.84vw;
+    font-weight: 300;
+    border-radius: 8px 8px 0px 8px;
+    margin-bottom: 30px;
+}
+
+.our-msg .msg {
+    border-radius: 8px 8px 8px 0;
+}
+
+.send-msg div, .our-msg div {
+    text-align: center;
+    font-size: 12px;
+}
+
+.msg-img {
+    width: 17vw;
+    height: 10vw;
+    margin-bottom: 1vw;
+    border-radius: 12px;
+
+}
