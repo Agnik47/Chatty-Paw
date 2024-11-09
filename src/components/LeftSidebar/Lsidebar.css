@@ -1,103 +1,140 @@
 .ls {
-    background-color: #001030;
-    color: white;
-    height: 75vh;
-    width: 16vw;
-
+  background-color: #001030;
+  color: white;
+  height: 75vh;
+  width: 16vw;
 }
 
 .ls-top {
-    padding: 2vw;
+  padding: 2vw;
 }
 
 .ls-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .ls-nav .logo {
-    max-width: 140px;
+  max-width: 140px;
 }
 
-.ls-nav .menu img{
-    max-height: 1.2vw;
-    opacity: 0.6;
-    cursor: pointer;
+.ls-nav .menu img {
+  max-height: 1.2vw;
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 .ls-search {
-    background-color: #002670;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 12px;
-    margin-top: 20px;
-    border-radius: 20px;
+  background-color: #002670;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  margin-top: 20px;
+  border-radius: 20px;
 }
 
-.ls-search .logo{
-    max-width: 1vw;
+.ls-search .logo {
+  max-width: 1vw;
 }
 
 .ls-search input {
-    background:transparent;
-    width: 80%;
-    border: none;
-    color: white;
-    font-size: 0.8vw;
-    outline: none;
+  background: transparent;
+  width: 80%;
+  border: none;
+  color: white;
+  font-size: 0.8vw;
+  outline: none;
 }
-
 
 .ls-search input::placeholder {
-    color: #c8c8c8;
+  color: #c8c8c8;
 }
 .ls-list {
-    display: flex;
-    flex-direction: column;
-    height: 70%;
-    overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  overflow-y: scroll;
 }
 
-.ls-list .friends img{
-    width: 2.5vw;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    
+.ls-list .friends img {
+  width: 2.5vw;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
 }
 
 .ls-list .friends {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 20px;
-    /* background: red; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  /* background: red; */
 }
-
 
 .ls-list .friends div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .friends p {
-    font-size: 0.9vw;
+  font-size: 0.9vw;
 }
 
 .friends {
-    transition: 0.3s;
-    cursor: pointer;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .friends:hover {
-    background-color: #077EFF;
+  background-color: #077eff;
 }
 .friends span {
-    color: #9f9f9f;
-    font-size: 0.6vw;
-    
+  color: #9f9f9f;
+  font-size: 0.6vw;
 }
 
 .friends:hover span {
-    color: white;
+  color: white;
+}
+
+.ls-nav .menu {
+  position: relative;
+  padding: 10px 0;
+}
+.sub-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: white;
+  color: #111;
+  border-radius: 5px;
+  border: 1px solid #111;
+  width: 8vw;
+  cursor: pointer;
+  display: none;
+  text-decoration: none;
+}
+
+.menu:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu p {
+  cursor: pointer;
+  font-size: 1vw;
+  color: black;
+  text-decoration: none;
+}
+.sub-menu p:hover {
+  color: #077eff;
+}
+
+.sub-menu hr {
+  border: none;
+  height: 1px;
+  background-color: #a4a4a4;
+  margin: 8px 0;
+  /* width: 10px; */
 }
