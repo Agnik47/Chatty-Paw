@@ -1,8 +1,10 @@
 import React from "react";
 import "./Lsidebar.css";
 import assets from "../../assets/assets";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Lsidebar = () => {
+
+  const navigate = useNavigate()
   return (
     <div className="ls">
       <div className="ls-top">
@@ -11,9 +13,9 @@ const Lsidebar = () => {
           <div className="menu">
             <img src={assets.menu_icon} alt="" />
             <div className="sub-menu">
-              <Link to={"/profile"}>
-                <p>Edit Profile</p>
-              </Link>
+          
+                <p onClick={()=> navigate("/profile")}>Edit Profile</p>
+
               <hr />
               <p>Log Out</p>
             </div>

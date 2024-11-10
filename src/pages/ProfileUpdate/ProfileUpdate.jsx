@@ -99,7 +99,8 @@ const ProfileUpdate = () => {
         </form>
 
         <img
-          src={image ? URL.createObjectURL(image) : assets.logo_icon} // Display selected image or logo
+          // src={image ? URL.createObjectURL(image) : prevImage? prevImage :  assets.logo_icon} // Display selected image or logo
+          src={image ? URL.createObjectURL(image): assets.pic3}
           className="prof-pic"
           alt=""
         />
