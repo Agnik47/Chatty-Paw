@@ -37,7 +37,7 @@ const signUp = async (username, email, password) => {
       lastSeen: Date.now(),
     });
     await setDoc(doc(db, "chats", user.uid), {
-      chatData: [],
+      chatsData: [],
     });
 
     console.log("Document successfully written!");
@@ -66,5 +66,4 @@ const logout = async () => {
   }
 };
 
-export { signUp, login , logout ,auth,db};
-  
+export { signUp, login, logout, auth, db };

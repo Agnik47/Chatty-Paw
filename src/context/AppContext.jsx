@@ -41,16 +41,29 @@ const AppcontextProvider = (props) => {
     }
   };
 
-  useEffect(()=> {
-    if(userData ) {
-        const chatRef = doc(db,"chats",userData.id);
-        const unSub = onSnapshot(chatRef, async(res)=> {
-            const chatItems = res.data().chatData
+  useEffect(() => {
+    if (userData) {
+      const chatRef = doc(db, "chats", userData.id);
+      const unSub = onSnapshot(chatRef, async (res) => {
+        const chatItems = res.data().chatsData;
 
-        })
+        const tempData = [];
+        for (const item of chatItems) {
+          const userRef = doc(db, "users", item, rId);
+          const userSnap = await getDoc(userRef);
+          const userData = userSnap.data();
+          //push userData an ChatItems and Strote it in tempData
+          tempData.push({ ...item, userData });
+        }
+        setChatData(tempData.sort((a, b) => b.updatedAt - a.updatedAt)); //it will say which chat is recent?
+        //Keep the Recent chat at TOP and Old chat at the bottom
+        //Now we will call the unSub
+      });
+      return () => {
+        unSub();
+      };
     }
-
-  },[userData])
+  }, [userData]);
 
   const value = {
     userData,
