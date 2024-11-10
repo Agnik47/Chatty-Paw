@@ -67,3 +67,4 @@ const logout = async () => {
 };
 
 export { signUp, login , logout ,auth,db};
+  
