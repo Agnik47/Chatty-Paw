@@ -10,13 +10,14 @@ const AppcontextProvider = (props) => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState(null);
   const [chatData, setChatData] = useState(null);
+  
 
   const loadUserData = async (uid) => {
     try {
       const userRef = doc(db, "users", uid);
       const userSnap = await getDoc(userRef);
       const userData = userSnap.data();
-      console.log(userData);
+      // console.log(userData);
       setUserData(userData);
 
       if (userData.avatar && userData.name) {
